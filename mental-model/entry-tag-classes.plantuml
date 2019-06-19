@@ -1,0 +1,14 @@
+@startuml
+
+!includesub entry-classes.plantuml!MAINCLASSES
+!includesub tag-classes.plantuml!MAINCLASSES
+
+
+title A mental model to Google Cloud Data Catalog's "Entry" and "Tag" relationship\n
+
+
+Entry -o Tag : entry
+Tag o- TagTemplate : template
+Tag *-- "1..*" TagField : fields
+
+@enduml

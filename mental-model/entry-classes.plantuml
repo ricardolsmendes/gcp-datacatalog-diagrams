@@ -1,0 +1,32 @@
+@startuml
+
+title A mental model to Google Cloud Data Catalog's "Entry" entity\n
+
+
+Entry <|-- ManualEntry
+Entry <|-- SynchronizedEntry
+Entry *- Schema
+Schema *-- "0..*" ColumnSchema : columns
+ColumnSchema *- "0..*" ColumnSchema : subcolumns
+
+
+!startsub MAINCLASSES
+abstract class Entry {
+  -String id
+  -Schema schema
+  -SourceSystemTimestamps sourceSystemTimestamps
+  -String linkedResource
+
+  +Entry get()
+  +Entry update()
+}
+!endsub
+
+class ColumnSchema {
+  -String column
+  -String description
+  -String type
+  -String mode
+}
+
+@enduml

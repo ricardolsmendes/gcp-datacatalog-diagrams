@@ -1,0 +1,23 @@
+@startuml
+
+title A mental model to Google Cloud Data Catalog's "Search Catalog" feature\n
+
+
+Catalog <. SearchResult
+
+
+!startsub MAINCLASSES
+class Catalog {
+  +{static}SearchResult[] search()
+  +{static}Entry lookupEntry()
+}
+
+class SearchResult {
+  -String searchResultType
+  -String searchResultSubtype
+  -String relativeResourceName
+  -String linkedResource
+}
+!endsub
+
+@enduml

@@ -1,0 +1,66 @@
+@startuml
+
+title A mental model to Google Cloud Data Catalog's "Tag" entity\n
+
+
+TagTemplate *-- "1..*" TagTemplateField : fields
+TagTemplateField *-- FieldType : type
+FieldType o-- PrimitiveType : primitiveType
+FieldType *-- EnumType : enumType
+Tag o- TagTemplate : template
+Tag *-- "1..*" TagField : fields
+
+
+!startsub MAINCLASSES
+class TagTemplate {
+  -String id
+  -String displayName
+
+  +TagTemplate create()
+  +TagTemplate get()
+  +void delete()
+}
+!endsub
+
+class TagTemplateField {
+  -String displayName
+
+  +TagTemplateField create()
+  +TagTemplateField rename()
+  +TagTemplateField update()
+  +void delete()
+}
+
+enum PrimitiveType {
+  BOOL
+  DOUBLE
+  STRING
+  TIMESTAMP
+}
+
+class EnumType {
+  -String[] allowedValues
+}
+
+!startsub MAINCLASSES
+class Tag {
+  -String id
+  -String scope
+  -String column
+
+  +Tag create()
+  +Tag update()
+  +Tag delete()
+  +Tag[] list()
+}
+
+class TagField {
+  -Boolean boolValue
+  -Double doubleValue
+  -String stringValue
+  -Timestamp timestampValue
+  -String enumValue
+}
+!endsub
+
+@enduml
