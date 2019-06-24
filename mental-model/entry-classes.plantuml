@@ -12,7 +12,8 @@ ColumnSchema *- "0..*" ColumnSchema : subcolumns
 
 !startsub MAINCLASSES
 abstract class Entry {
-  -String id
+  -String name
+  -String type
   -Schema schema
   -SourceSystemTimestamps sourceSystemTimestamps
   -String linkedResource
