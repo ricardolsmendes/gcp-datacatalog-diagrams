@@ -6,17 +6,21 @@ title A mental model to Google Cloud Data Catalog's core classes\n
 Catalog <. SearchResult
 Catalog <.. Entry
 SearchResult .. Entry
+SearchResult .. TagTemplate
+
 Entry <|-- ManualEntry
 Entry <|-- SynchronizedEntry
 Schema -* Entry
 Schema *-- ColumnSchema : columns
 ColumnSchema *-- ColumnSchema : subcolumns
-Entry -o Tag : entry
+
 Tag o- TagTemplate : template
 Tag *-- TagField : fields
 TagTemplate *-- TagTemplateField : fields
 TagTemplateField *-- FieldType : type
 FieldType o-- PrimitiveType : primitiveType
 FieldType *-- EnumType : enumType
+
+Entry -o Tag : entry
 
 @enduml
