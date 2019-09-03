@@ -4,7 +4,7 @@ Diagrams that help clarifying Google Cloud Data Catalog core features.
 
 > Disclaimer: this is my personal way of thinking, as a Data Catalog early adopter — only & simply this. The model is not based on any official/supported reference.
 
-## Understand the context around such diagrams 
+## To understand the context...
 
 - [Data Catalog hands-on guide: a mental model](https://medium.com/google-cloud/data-catalog-hands-on-guide-a-mental-model-dae7f6dd49e) @ Google Cloud Community / Medium
 
@@ -12,7 +12,7 @@ Diagrams that help clarifying Google Cloud Data Catalog core features.
 
 - [Data Catalog hands-on guide: templates & tags with Python](https://medium.com/google-cloud/data-catalog-hands-on-guide-templates-tags-with-python-c45eb93372ef) @ Google Cloud Community / Medium
 
-## 1. Entity Model diagrams
+## 1. Entity Model
 
 ### 1.1. Core entities
 
