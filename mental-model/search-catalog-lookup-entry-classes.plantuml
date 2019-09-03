@@ -4,10 +4,11 @@
 !includesub search-catalog-classes.plantuml!MAINCLASSES
 
 
-title A mental model to Google Cloud Data Catalog's "Lookup Entry" feature\n
+title A mental model on Google Cloud Data Catalog Search & Lookup related entities\n
 
 
 Catalog <.. Entry
+Catalog <. SearchResult
 SearchResult .. Entry
 
 @enduml

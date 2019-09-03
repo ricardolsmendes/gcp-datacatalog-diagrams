@@ -1,6 +1,6 @@
 @startuml
 
-title A mental model to Google Cloud Data Catalog's "Tag" entity\n
+title A mental model on Google Cloud Data Catalog Tag Template and Tag relationship\n
 
 
 TagTemplate *-- "1..*" TagTemplateField : fields

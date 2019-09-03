@@ -1,6 +1,6 @@
 @startuml
 
-title A mental model to Google Cloud Data Catalog's core classes\n
+title A mental model on Google Cloud Data Catalog core entities\n
 
 
 Catalog <. SearchResult
