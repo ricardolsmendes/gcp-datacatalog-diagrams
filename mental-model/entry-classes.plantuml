@@ -1,6 +1,6 @@
 @startuml
 
-title A mental model to Google Cloud Data Catalog's "Entry" entity\n
+title A mental model on Google Cloud Data Catalog Entry entity\n
 
 
 Entry <|-- ManualEntry
