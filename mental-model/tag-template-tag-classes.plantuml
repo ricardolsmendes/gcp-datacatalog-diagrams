@@ -20,6 +20,25 @@ class TagTemplate {
   +TagTemplate get()
   +void delete()
 }
+
+class Tag {
+  -String id
+  -String scope
+  -String column
+
+  +Tag create()
+  +Tag update()
+  +Tag delete()
+  +Tag[] list()
+}
+
+class TagField {
+  -Boolean boolValue
+  -Double doubleValue
+  -String stringValue
+  -Timestamp timestampValue
+  -String enumValue
+}
 !endsub
 
 class TagTemplateField {
@@ -41,26 +60,5 @@ enum PrimitiveType {
 class EnumType {
   -String[] allowedValues
 }
-
-!startsub MAINCLASSES
-class Tag {
-  -String id
-  -String scope
-  -String column
-
-  +Tag create()
-  +Tag update()
-  +Tag delete()
-  +Tag[] list()
-}
-
-class TagField {
-  -Boolean boolValue
-  -Double doubleValue
-  -String stringValue
-  -Timestamp timestampValue
-  -String enumValue
-}
-!endsub
 
 @enduml
