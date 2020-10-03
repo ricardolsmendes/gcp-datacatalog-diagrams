@@ -1,6 +1,6 @@
 # gcp-data-catalog-diagrams
 
-Diagrams that help clarifying Google Cloud Data Catalog's core features.
+Diagrams that help to clarify Google Cloud Data Catalog core features.
 
 > Disclaimer: this is my personal way of thinking, as a Data Catalog early
 >adopter — only & simply this. The model is not based on any official/supported
