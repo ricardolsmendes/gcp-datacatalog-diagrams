@@ -21,19 +21,19 @@ Diagrams that help to clarify Google Cloud Data Catalog core features.
 
 ### 1.1. Core entities
 
-![alt text](mental-model/core-classes.png "Google Cloud Data Catalog core entities")
+![N|Solid](mental-model/core-classes.png "Google Cloud Data Catalog core entities")
 
 ### 1.2. Search Catalog & Lookup Entry related entities
 
-![alt text](mental-model/search-catalog-lookup-entry-classes.png "Google Cloud Data Catalog Search & Lookup related entities")
+![N|Solid](mental-model/search-catalog-lookup-entry-classes.png "Google Cloud Data Catalog Search & Lookup related entities")
 
 ### 1.3. Tag Template & Tag relationship
 
-![alt text](mental-model/tag-template-tag-classes.png "Google Cloud Data Catalog Tag Template & Tag related entities")
+![N|Solid](mental-model/tag-template-tag-classes.png "Google Cloud Data Catalog Tag Template & Tag related entities")
 
 ### 1.4. Entry, Tag & Tag Template relationships
 
-![alt text](mental-model/entry-tag-tag-template-classes.png "Google Cloud Data Catalog Entry, Tag Template & Tag related entities")
+![N|Solid](mental-model/entry-tag-tag-template-classes.png "Google Cloud Data Catalog Entry, Tag Template & Tag related entities")
 
 
 [1]: https://medium.com/google-cloud/data-catalog-hands-on-guide-a-mental-model-dae7f6dd49e
