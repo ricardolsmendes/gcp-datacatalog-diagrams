@@ -1,14 +1,17 @@
 @startuml
 
+skinparam backgroundcolor transparent
+
+
 title A mental model on Google Cloud Data Catalog Tag Template and Tag relationship\n
 
 
-TagTemplate *-- "1..*" TagTemplateField : fields
-TagTemplateField *-- FieldType : type
-FieldType o-- PrimitiveType : primitiveType
-FieldType *-- EnumType : enumType
-Tag o- TagTemplate : template
-Tag *-- "1..*" TagField : fields
+TagTemplate *-- "1..*" TagTemplateField
+TagTemplateField *-- FieldType
+FieldType o-- PrimitiveType
+FieldType *-- EnumType
+Tag -> TagTemplate
+Tag *-- "1..*" TagField
 
 
 !startsub MAINCLASSES

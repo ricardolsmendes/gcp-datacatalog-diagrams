@@ -1,26 +1,27 @@
 @startuml
 
+skinparam backgroundcolor transparent
+
+
 title A mental model on Google Cloud Data Catalog core entities\n
 
 
-Catalog <. SearchResult
-Catalog <.. Entry
-SearchResult .. Entry
-SearchResult .. TagTemplate
+Catalog .> SearchResult
+Catalog *-- "1..*" Entry : entries
 
 Entry <|-- ManualEntry
 Entry <|-- SynchronizedEntry
 Schema -* Entry
-Schema *-- ColumnSchema : columns
-ColumnSchema *-- ColumnSchema : subcolumns
+Schema *-- "0..*" ColumnSchema
+ColumnSchema *-- "0..*" ColumnSchema : subcolumns
 
-Tag o- TagTemplate : template
-Tag *-- TagField : fields
-TagTemplate *-- TagTemplateField : fields
-TagTemplateField *-- FieldType : type
-FieldType o-- PrimitiveType : primitiveType
-FieldType *-- EnumType : enumType
+Tag -> TagTemplate
+Tag *-- "1..*" TagField
+TagTemplate *-- "1..*" TagTemplateField
+TagTemplateField *-- FieldType
+FieldType o-- PrimitiveType
+FieldType *-- EnumType
 
-Entry -o Tag : entry
+Entry <- Tag : < annotates
 
 @enduml

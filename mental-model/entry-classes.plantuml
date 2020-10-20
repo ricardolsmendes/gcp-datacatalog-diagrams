@@ -1,12 +1,15 @@
 @startuml
 
+skinparam backgroundcolor transparent
+
+
 title A mental model on Google Cloud Data Catalog Entry entity\n
 
 
 Entry <|-- ManualEntry
 Entry <|-- SynchronizedEntry
 Entry *- Schema
-Schema *-- "0..*" ColumnSchema : columns
+Schema *-- "0..*" ColumnSchema
 ColumnSchema *- "0..*" ColumnSchema : subcolumns
 
 

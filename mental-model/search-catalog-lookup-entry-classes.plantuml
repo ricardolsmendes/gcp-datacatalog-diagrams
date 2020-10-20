@@ -1,5 +1,8 @@
 @startuml
 
+skinparam backgroundcolor transparent
+
+
 !includesub entry-classes.plantuml!MAINCLASSES
 !includesub search-catalog-classes.plantuml!MAINCLASSES
 
@@ -7,8 +10,7 @@
 title A mental model on Google Cloud Data Catalog Search & Lookup related entities\n
 
 
-Catalog <.. Entry
-Catalog <. SearchResult
-SearchResult .. Entry
+Catalog *-- "1..*" Entry : entries
+Catalog .> SearchResult
 
 @enduml

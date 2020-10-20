@@ -1,5 +1,8 @@
 @startuml
 
+skinparam backgroundcolor transparent
+
+
 !includesub entry-classes.plantuml!MAINCLASSES
 !includesub tag-template-tag-classes.plantuml!MAINCLASSES
 
@@ -7,8 +10,8 @@
 title A mental model on Google Cloud Data Catalog Entry, Tag & Tag Template relationships\n
 
 
-Entry -o Tag : entry
-Tag o- TagTemplate : template
-Tag *-- "1..*" TagField : fields
+Entry <- Tag : < annotates
+Tag -> TagTemplate
+Tag *-- "1..*" TagField
 
 @enduml
