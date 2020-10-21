@@ -6,7 +6,7 @@ skinparam backgroundcolor transparent
 title A mental model on Google Cloud Data Catalog Search related entities\n
 
 
-Catalog .> SearchResult
+Catalog -> SearchResult
 
 
 !startsub MAINCLASSES
