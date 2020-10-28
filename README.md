@@ -1,4 +1,4 @@
-# gcp-data-catalog-diagrams
+# gcp-datacatalog-diagrams
 
 Diagrams that help to clarify Google Cloud Data Catalog core features.
 
